@@ -4,6 +4,42 @@ Updating the Video Processing repo for building the dataset for training the Thi
 
 This particular repo's purpose is to hopefully make a simple webui for the project and allow for animating generated images from stable diffusion based on downloaded videos. Not specifically just using the youtube-dl since that's also an old mess of unsupported code. So to further simplify, i'll instead just have a `sourcevideo` folder that is to be processed into usable datasets for the thin plate spline motion model.
 
+## conda setup
+
+first time messing with conda, so i had to figure out which packages had what dependencies
+then installed the ones it actually needed.
+
+```bash
+conda config --append channels conda-forge
+conda config --append channels fastchan
+conda config --append channels fastai
+conda config --append channels pytorch-lts
+```
+
+had to add these just to make sure that the requirements would find
+what they need
+
+```bash
+conda create --name vpenv --file requirements.txt
+```
+
+would successfully install the requirements...
+then to activate conda's env:
+
+```bash
+conda activate vpenv
+```
+
+for VSCode it's helpful to open the command pallette Ctrl+Shift+P, enter `select Interpreter`
+then pick the vpenv from the list to load up the conda modules.
+
+after all that
+still need to use `maskrcnn_benchmark` but this has been abandoned for [detectron2](https://github.com/facebookresearch/detectron2) so it looks like we'll need that as a git module?
+
+anyway, will continue this after some sleep.
+
+--- original readme.md ---
+
 # Video Preprocessing
 This repository provides tools for preprocessing videos for TaiChi, VoxCeleb and UvaNemo dataset used in [paper](https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation).
 
