@@ -1,9 +1,15 @@
-# Video Preprocessing 
+# my attempt to update the things
+
+Updating the Video Processing repo for building the dataset for training the Thin-Plate-Spline-Motion-Model, which also needs to be updated. A lot of the pip environment stuff is really out of date, and there's no real good work around since some of the important stuff is simply not available any more. So after a few hours of trying to figure out what's borked, i've decided to just go headlong into updating the entire project.
+
+This particular repo's purpose is to hopefully make a simple webui for the project and allow for animating generated images from stable diffusion based on downloaded videos. Not specifically just using the youtube-dl since that's also an old mess of unsupported code. So to further simplify, i'll instead just have a `sourcevideo` folder that is to be processed into usable datasets for the thin plate spline motion model.
+
+# Video Preprocessing
 This repository provides tools for preprocessing videos for TaiChi, VoxCeleb and UvaNemo dataset used in [paper](https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation).
 
 <!---
 # Downloading
-VoxCeleb with our preprocessing can be download in [.mp4](https://yadi.sk/d/6XkWUoJzjzuwVA) format and in [.png](https://drive.google.com/file/d/1VLhAbzbrexqg-nHq8l1AV8oc-Sq-x0kZ/view?usp=sharing). 
+VoxCeleb with our preprocessing can be download in [.mp4](https://yadi.sk/d/6XkWUoJzjzuwVA) format and in [.png](https://drive.google.com/file/d/1VLhAbzbrexqg-nHq8l1AV8oc-Sq-x0kZ/view?usp=sharing).
 
 TaiChi can be downloade directly in format [.mp4](https://yadi.sk/d/03C366987mkS1w) or [.png](https://drive.google.com/file/d/10b_OiRxMKRgbrOQHQvM-OEISPWfiM7zY/view?usp=sharing).
 -->
